@@ -27,7 +27,21 @@
     <script>
     
       $(document).ready(function() {
-       
+       	$('.preface-slider__holder').carouFredSel({
+          align: false,
+          responsive : true, 
+          transition: true, 
+          width: "100%",
+          next: ".preface-slider__nav_next",
+          prev: ".preface-slider__nav_prev",
+          pagination: {
+            container: ".preface-slider__pager"
+          },
+          scroll: {
+            timeoutDuration: 5000,
+            fx: "crossfade"
+          }
+		    });
       });
     </script>
   </head>
@@ -67,7 +81,19 @@
 	  					<span>Ваш город:</span>
 							<b>Я</b>рославль 
 	  				</p>
-	  				<a href="#" class="header__city-switch">изменить</a>
+	  				<a href="#" class="header__city-switch popup-btn">изменить</a>
+	  				<div class="popup-btn-content popup-btn-content_wide popup-btn-content_city">
+	  					<div class="popup-btn-content__holder">
+	  						<span class="popup-btn-content__close"></span>
+	  						<div class="city-popup">
+	  							<p class="city-popup__caption">Выберите город:</p>
+	  							<p><a href="#"><b>М</b>осква</a></p>
+	  							<p><a href="#"><b>К</b>азань</a></p>
+	  							<p><a href="#"><b>И</b>ваново</a></p>
+	  							<p><a href="#"><b>П</b>ермь</a></p>
+	  						</div>
+	  					</div>
+		  			</div>
 	  			</div>
 	  			<div class="col-md-6">
 	  				<p class="header__phones">
@@ -89,7 +115,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/1.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Клапаны (вентили)</span>
@@ -101,7 +127,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/2.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Канализаия ПП</span>
@@ -113,7 +139,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/3.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Краны латунные</span>
@@ -125,7 +151,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/4.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Краны шаровые стальные</span>
@@ -137,7 +163,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/5.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Отопительное оборудование</span>
@@ -149,7 +175,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/6.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Противопожарное оборудование</span>
@@ -161,7 +187,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/7.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Фильтры, грязевики, элеваторы</span>
@@ -173,7 +199,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/8.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Водопровод полипропилен PP-R, металлопластик и PEX</span>
@@ -185,7 +211,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/9.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Детали трубопровода</span>
@@ -197,7 +223,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/10.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Задвижки и затворы</span>
@@ -209,7 +235,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/11.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Измерительные приборы</span>
@@ -221,7 +247,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/12.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Изоляция</span>
@@ -233,7 +259,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/13.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Чугунная канализация</span>
@@ -245,7 +271,7 @@
 											<span class="catalog-menu-sub__tb">
 												<span class="catalog-menu-sub__row">
 													<span class="catalog-menu-sub__cell">
-														<i class="icon-catalog-1"></i>
+														<img src="f/i/catalog/14.png" alt="">
 													</span>
 													<span class="catalog-menu-sub__cell">
 														<span>Сантехника</span>
@@ -268,13 +294,49 @@
 		  				</div>
 		  			</div>
 		  			<div class="col-md-6">
-		  				<a href="#" class="header__callback"><i class="icon-callback"></i>Заказать обратный звонок</a>
+		  				<a href="#" class="header__callback popup-btn"><i class="icon-callback"></i>Заказать обратный звонок</a>
+		  				<div class="popup-btn-content">
+		  					<div class="popup-btn-content__holder">
+		  						<span class="popup-btn-content__close"></span>
+		  						<form action="" method="post" class="callback-popup">
+			  						<p class="callback-popup__caption">ФИО:</p>
+									  <input type="text" name="" class="callback-popup__input" />
+									  <p class="callback-popup__caption">Телефон:</p>
+									  <input type="text" name="" class="callback-popup__input" />
+									  <button type="submit" name="" class="callback-popup__btn"><i class="icon-callback"></i>Заказать</button>
+									</form>
+		  					</div>
+			  			</div>
 		  			</div>
   				</div>
   			</div>
   		</div>
   	</header>
   	<div class="content">
+  		<section class="section preface-slider">
+  			<div class="holder">
+  				<div class="preface-slider__wrap">
+						<div class="preface-slider__holder">
+							<div class="preface-slider__item">
+								<img src="f/i/preface-slider/1.jpg" alt="" width="1100" height="310">
+								<div class="preface-slider__text">
+									<p class="preface-slider__title">Бесплатная доставка<br>в соседние регионы:</p>
+									<p>Вологда, Череповец <br>Иваново, Кострома</p>
+								</div>
+							</div>
+							<div class="preface-slider__item">
+								<img src="f/i/preface-slider/2.jpg" alt="" width="1100" height="310">
+							</div>
+							<div class="preface-slider__item">
+								<img src="f/i/preface-slider/1.jpg" alt="" width="1100" height="310">
+							</div>
+						</div>
+						<span class="preface-slider__nav preface-slider__nav_prev"></span>
+						<span class="preface-slider__nav preface-slider__nav_next"></span>
+					</div>
+					<div class="preface-slider__pager"></div>
+  			</div>
+  		</section>
   		<section class="section catalog clearfix">
   			<div class="holder">
   				<div class="catalog__holder">
@@ -393,52 +455,99 @@
   				</div>
   			</div>
   		</section>
-  		<section class="section spec">
+  		<section class="section spec switcher">
   			<div class="holder">
-  				<h2>Хиты продаж</h2>
-  				<div class="row">
-						<div class="col-md-5">
-							<a href="#" class="spec__item">
-								<div class="spec__img">
-									<img src="f/i/spec/1.jpg" alt="">
-								</div>
-								<p class="spec__name">Краны 11б18бк
-									<span class="spec__price"><span>от </span>188,00 <span>руб.</span></span>
-								</p>
-							</a>
-						</div>
-						<div class="col-md-5">
-							<a href="#" class="spec__item">
-								<div class="spec__img">
-									<img src="f/i/spec/2.jpg" alt="">
-								</div>
-								<p class="spec__name">Клапаны запорные
+					<div class="switcher__control">
+						<span class="switcher__btn switcher__btn_active" data-switch-btn="hits">Хиты продаж</span>
+						<span class="switcher__btn" data-switch-btn="spec">Специальные предложения</span>
+					</div>
+					<div class="switcher__wrap">
+						<div class="row switcher__holder switcher__holder_active" data-switch-hold="hits">
+							<div class="col-md-5">
+								<a href="#" class="spec__item">
+									<div class="spec__img">
+										<img src="f/i/spec/1.jpg" alt="">
+									</div>
+									<p class="spec__name">Краны 11б18бк
+										<span class="spec__price"><span>от </span>188,00 <span>руб.</span></span>
+									</p>
+								</a>
+							</div>
+							<div class="col-md-5">
+								<a href="#" class="spec__item">
+									<div class="spec__img">
+										<img src="f/i/spec/2.jpg" alt="">
+									</div>
+									<p class="spec__name">Клапаны запорные
 
-									<span class="spec__price"><span>от </span> 170,34  <span>руб.</span></span>
-								</p>
-							</a>
-						</div>
-						<div class="col-md-5">
-							<a href="#" class="spec__item">
-								<div class="spec__img">
-									<img src="f/i/spec/3.jpg" alt="">
-								</div>
-								<p class="spec__name">Фильтры ФМФ
-									<span class="spec__price"><span>от </span> 2024,33 <span>руб.</span></span>
-								</p>
-							</a>
-						</div>
-						<div class="col-md-5">
-							<a href="#" class="spec__item">
-								<div class="spec__img">
-									<img src="f/i/spec/4.jpg" alt="">
-								</div>
-								<p class="spec__name">Краны КРДП
-									<span class="spec__price"><span>от  </span>241,32 <span> руб.</span></span>
-								</p>
-							</a>
-						</div>
-  				</div>
+										<span class="spec__price"><span>от </span> 170,34  <span>руб.</span></span>
+									</p>
+								</a>
+							</div>
+							<div class="col-md-5">
+								<a href="#" class="spec__item">
+									<div class="spec__img">
+										<img src="f/i/spec/3.jpg" alt="">
+									</div>
+									<p class="spec__name">Фильтры ФМФ
+										<span class="spec__price"><span>от </span> 2024,33 <span>руб.</span></span>
+									</p>
+								</a>
+							</div>
+							<div class="col-md-5">
+								<a href="#" class="spec__item">
+									<div class="spec__img">
+										<img src="f/i/spec/4.jpg" alt="">
+									</div>
+									<p class="spec__name">Краны КРДП
+										<span class="spec__price"><span>от  </span>241,32 <span> руб.</span></span>
+									</p>
+								</a>
+							</div>
+	  				</div>
+	  				<div class="row switcher__holder" data-switch-hold="spec">
+							<div class="col-md-5">
+								<a href="#" class="spec__item">
+									<div class="spec__img">
+										<img src="f/i/spec/4.jpg" alt="">
+									</div>
+									<p class="spec__name">Краны КРДП
+										<span class="spec__price"><span>от  </span>241,32 <span> руб.</span></span>
+									</p>
+								</a>
+							</div>
+							<div class="col-md-5">
+								<a href="#" class="spec__item">
+									<div class="spec__img">
+										<img src="f/i/spec/1.jpg" alt="">
+									</div>
+									<p class="spec__name">Краны 11б18бк
+										<span class="spec__price"><span>от </span>188,00 <span>руб.</span></span>
+									</p>
+								</a>
+							</div>
+							<div class="col-md-5">
+								<a href="#" class="spec__item">
+									<div class="spec__img">
+										<img src="f/i/spec/2.jpg" alt="">
+									</div>
+									<p class="spec__name">Клапаны запорные
+										<span class="spec__price"><span>от </span> 170,34  <span>руб.</span></span>
+									</p>
+								</a>
+							</div>
+							<div class="col-md-5">
+								<a href="#" class="spec__item">
+									<div class="spec__img">
+										<img src="f/i/spec/3.jpg" alt="">
+									</div>
+									<p class="spec__name">Фильтры ФМФ
+										<span class="spec__price"><span>от </span> 2024,33 <span>руб.</span></span>
+									</p>
+								</a>
+							</div>
+	  				</div>
+					</div>
   			</div>
   		</section>
   		<section class="section producers clearfix">

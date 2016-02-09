@@ -1603,7 +1603,7 @@ button.close {
     margin-left: 0%;
   }
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {  */
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16, .col-md-17, .col-md-18, .col-md-19, .col-md-20 {
     float: left;
   }
@@ -1856,7 +1856,7 @@ button.close {
   .col-md-offset-0 {
     margin-left: 0%;
   }
-}
+/* } */
 @media (min-width: 1200px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-13, .col-lg-14, .col-lg-15, .col-lg-16, .col-lg-17, .col-lg-18, .col-lg-19, .col-lg-20 {
     float: left;
@@ -2294,12 +2294,13 @@ a:hover .icon-inteo {
   min-height: 100%;
   height: auto!important;
   margin: 0 0 -260px;
+  min-width: 1000px;
   overflow: hidden;
 }
 .holder {
   margin: 0 auto;
   max-width: 1100px;
-  //padding: 0 40px;
+  padding: 0 20px;
   min-width: 1000px;
 }
 .wrap:after {
@@ -2350,7 +2351,9 @@ a:hover .icon-inteo {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
+    letter-spacing: 0;
   }
+
   &__phones,
   &__city {
     line-height: 20px;
@@ -2360,6 +2363,10 @@ a:hover .icon-inteo {
     font-weight: bold;
     letter-spacing: .025em;
     text-transform: uppercase;
+    @media (max-width: 1024px) {
+      font-size: 20px;
+      letter-spacing: 0;
+    }
     & span {
       font-size: 11px;
       line-height: 11px;
@@ -2398,12 +2405,186 @@ a:hover .icon-inteo {
     text-transform: uppercase;
     letter-spacing: .025em;
     padding-left: 22px;
+    @media (max-width: 1024px) {
+      letter-spacing: -.025em;
+      font-size: 12px;
+    }
     &:hover {
       color: #fff;
       background: #41d7ff;
     }
     &:active {
       background: #00b5ef;
+    }
+  }
+}
+.popup-btn-content {
+  position: absolute;
+  top: 100%;
+  margin-top: 40px;
+  left: 20px;
+  right: 20px;
+  opacity: 0;
+  z-index: -1;
+  &_wide {
+    left: 0;
+    right: 0;
+  }
+  &_city {
+    margin-top: -20px;
+  }
+  &__holder {
+    background: #fff;
+    padding: 35px 60px 40px;
+    -webkit-box-shadow: 0px 4px 50px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow:    0px 4px 50px 0px rgba(50, 50, 50, 0.2);
+    box-shadow:         0px 4px 50px 0px rgba(50, 50, 50, 0.2);
+    border: 1px solid #eaeaea;
+  }
+  .transition(opacity, .5s, ease);
+  &_active {
+    opacity: 1;
+    z-index: 10;
+  }
+  &__close {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+    right: -13px;
+    top: -13px;
+    &:before,
+    &:after {
+      content: '';
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      background: #009acf;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:after {
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+}
+.city-popup {
+  &__caption {
+    line-height: 32px;
+    color: #9a9a9a;
+  }
+  & p {
+    line-height: 30px;
+  }
+  & a {
+    line-height: 20px;
+    color: #303030;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    & b {
+      color: @orange;
+    }
+  }
+}
+.callback-popup {
+  &__input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  &__caption {
+    line-height: 20px;
+    color: #9a9a9a;
+  }
+  &__btn {
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    margin-top: 15px;
+    background: @orange;
+    border: none;
+  }
+}
+.preface-slider {
+  padding-bottom: 0 !important;
+  &__wrap {
+    position: relative;
+  }
+  &__holder {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  &__item {
+    outline: 1px solid #eaeaea;
+    position: relative;
+  }
+  &__text {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font: bold 20px "Candara", sans-serif;
+    color: #fff;
+  }
+  &__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 28px;
+  }
+  &__pager {
+    text-align: center;
+    & a {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #eaeaea;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      & span {
+        display: none;
+      }
+      &.selected {
+        background: @orange;
+      }
+    }
+  }
+  &__nav {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    z-index: 5;
+    &:hover {
+      border-color: @orange;
+    }
+    &_next {
+      left: auto;
+      right: 20px;
+      -ms-transform: rotate(225deg);
+      -webkit-transform: rotate(225deg);
+      transform: rotate(225deg);
     }
   }
 }
@@ -2416,6 +2597,11 @@ a:hover .icon-inteo {
   display: inline-block;
   vertical-align: top;
   position: relative;
+  white-space: nowrap;
+  @media (max-width: 1024px) {
+    letter-spacing: -.025em;
+    font-size: 12px;
+  }
   & .icon-catalog {
     .transition(all, .5s, ease);
   }
@@ -2434,6 +2620,7 @@ a:hover .icon-inteo {
 }
 .catalog-menu-sub {
   max-height: 0;
+  white-space: normal;
   overflow: hidden;
   position: absolute;
   top: 100%;
@@ -2474,6 +2661,9 @@ a:hover .icon-inteo {
   &__cell {
     display: table-cell;
     vertical-align: middle;
+    & img {
+      max-width: 26px;
+    }
     &:first-child {
       width: 40px;
     }
@@ -2618,6 +2808,7 @@ a:hover .icon-inteo {
   }
 }
 .catalog {
+  padding-bottom: 0 !important;
   &__holder {
     margin: 0 -10px;
   }
@@ -2704,6 +2895,69 @@ a:hover .icon-inteo {
 }
 .section {
   padding: 40px 0;
+}
+.switcher {
+  position: relative;
+  &__control {
+    margin-bottom: 20px;
+  }
+  &__wrap {
+    position: relative;
+  }
+  &__btn {
+    color: #009acf;
+    border-bottom: 1px dashed;
+    font: 22px "Candara", sans-serif;
+    cursor: pointer;
+    letter-spacing: .050em;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    font-weight: bold;
+    &:hover {
+      color: @orange;
+    }
+    &:before {
+      content: '/';
+      position: absolute;
+      font: bold 33px "Candara", sans-serif;
+      color: #303030;
+      left: -15px;
+      top: -10px;
+    }
+    &:first-child {
+      margin-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+    &_active {
+      color: #303030;
+      font-size: 33px;
+      border-bottom: none;
+      cursor: default;
+      pointer-events: none;
+      &:before {
+        top: 0px;
+      }
+    }
+  }
+  &__holder {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    .transition(opacity, 1s, ease);
+    &_active {
+      position: relative;
+      top: auto;
+      left: auto;
+      opacity: 1;
+      z-index: 1;
+    }
+  }
 }
 .footer {
   min-height: 260px;
