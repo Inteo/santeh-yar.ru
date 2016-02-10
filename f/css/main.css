@@ -2440,6 +2440,15 @@ a:hover .icon-inteo {
   margin: 0;
   padding: 0;
 }
+.breadcrumbs {
+  list-style: none;
+  margin-left: -10px;
+}
+.breadcrumbs li {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
 .header__menu {
   padding: 15px 0;
   border-bottom: 1px solid #e9e9e9;
