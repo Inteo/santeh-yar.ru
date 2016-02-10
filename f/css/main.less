@@ -308,6 +308,9 @@ h2 {
   color: #009acf;
   margin-bottom: 20px;
   text-transform: none;
+  & img {
+    margin-right: 20px;
+  }
 }
 .text-center {
   text-align: center
@@ -3024,6 +3027,56 @@ a:hover .icon-inteo {
       opacity: 1;
       z-index: 1;
     }
+  }
+}
+.catalog-list {
+  &__holder {
+    padding-top: 20px;
+  }
+  &__item {
+    margin-bottom: 30px;
+    & ul {
+      border-left: 1px solid #eaeaea;
+      list-style: none;
+      & li {
+        padding-left: 15px;
+        margin-bottom: 15px;
+        & a {
+          color: #000;
+          &:hover {
+            color: @orange;
+          }
+        }
+      }
+    }
+  }
+  &__img {
+    border: 1px solid #eaeaea;
+    width: 140px;
+    height: 85px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 15px;
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-width: 98%;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  &__name {
+    color: #00669c;
+    margin-bottom: 18px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__link:hover &__name {
+    color: @orange;
   }
 }
 .footer {

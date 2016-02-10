@@ -309,6 +309,10 @@ h2 {
   margin-bottom: 20px;
   text-transform: none;
 }
+.h2 img,
+h2 img {
+  margin-right: 20px;
+}
 .text-center {
   text-align: center;
 }
@@ -3163,6 +3167,54 @@ a:hover .icon-inteo {
   left: auto;
   opacity: 1;
   z-index: 1;
+}
+.catalog-list__holder {
+  padding-top: 20px;
+}
+.catalog-list__item {
+  margin-bottom: 30px;
+}
+.catalog-list__item ul {
+  border-left: 1px solid #eaeaea;
+  list-style: none;
+}
+.catalog-list__item ul li {
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+.catalog-list__item ul li a {
+  color: #000;
+}
+.catalog-list__item ul li a:hover {
+  color: #f9521e;
+}
+.catalog-list__img {
+  border: 1px solid #eaeaea;
+  width: 140px;
+  height: 85px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 15px;
+}
+.catalog-list__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 98%;
+  bottom: 0;
+  margin: auto;
+}
+.catalog-list__name {
+  color: #00669c;
+  margin-bottom: 18px;
+  display: inline-block;
+  vertical-align: top;
+}
+.catalog-list__link:hover .catalog-list__name {
+  color: #f9521e;
 }
 .footer {
   min-height: 260px;
