@@ -307,6 +307,7 @@ h2 {
   font: bold 22px/20px "Candara", sans-serif;
   color: #009acf;
   margin-bottom: 20px;
+  text-transform: none;
 }
 .text-center {
   text-align: center;
@@ -1053,8 +1054,8 @@ button.close {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
   .container {
@@ -1074,12 +1075,12 @@ button.close {
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .row {
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .col-xs-1,
 .col-sm-1,
@@ -1163,8 +1164,8 @@ button.close {
 .col-lg-20 {
   position: relative;
   min-height: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .col-xs-1,
 .col-xs-2,
@@ -2442,12 +2443,52 @@ a:hover .icon-inteo {
 }
 .breadcrumbs {
   list-style: none;
-  margin-left: -10px;
+  margin-left: -20px;
+  margin-bottom: 30px;
 }
 .breadcrumbs li {
   display: inline-block;
   vertical-align: top;
-  margin-left: 10px;
+  margin-left: 20px;
+  line-height: 20px;
+  position: relative;
+}
+.breadcrumbs li a,
+.breadcrumbs li span {
+  color: #9a9a9a;
+}
+.breadcrumbs li a:hover {
+  color: #f9521e;
+}
+.breadcrumbs li:before {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  top: 0;
+  bottom: 0;
+  left: -13px;
+  margin: auto 0;
+  -ms-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+  border-left: 1px solid #9a9a9a;
+  border-bottom: 1px solid #9a9a9a;
+}
+.breadcrumbs li:after {
+  position: absolute;
+  content: '';
+  width: 7px;
+  height: 1px;
+  top: 0;
+  bottom: 0;
+  left: -15px;
+  margin: auto 0;
+  background: #9a9a9a;
+}
+.breadcrumbs li:first-child:before,
+.breadcrumbs li:first-child:after {
+  display: none;
 }
 .header__menu {
   padding: 15px 0;
@@ -2956,17 +2997,31 @@ a:hover .icon-inteo {
   right: 0;
   margin: auto;
 }
-.catalog {
-  padding-bottom: 0 !important;
-}
 .catalog__holder {
   margin: 0 -10px;
+  margin-top: 40px;
 }
 .catalog__item {
+  margin-bottom: 20px;
+}
+.catalog__item a {
+  border: 1px solid #eaeaea;
+  display: block;
+  padding: 25px 20px 0 35px;
+  min-height: 165px;
+}
+.catalog_small {
+  padding-bottom: 0 !important;
+}
+.catalog_small .catalog__item a {
   width: 14.285714%;
   float: left;
   padding: 0 10px;
-  margin-bottom: 15px;
+  border: none;
+  min-height: 0;
+}
+.catalog_small .catalog__holder {
+  margin-top: 0;
 }
 .catalog__img {
   display: block;
