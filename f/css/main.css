@@ -3170,6 +3170,7 @@ a:hover .icon-inteo {
 }
 .catalog-list__holder {
   padding-top: 20px;
+  min-height: 600px;
 }
 .catalog-list__item {
   margin-bottom: 30px;
@@ -3207,11 +3208,27 @@ a:hover .icon-inteo {
   bottom: 0;
   margin: auto;
 }
+.catalog-list_big .catalog-list__img {
+  width: 100%;
+  height: 156px;
+}
+.catalog-list_big .catalog-list__img img {
+  margin: 0;
+}
+.catalog-list_big .catalog-list__img_center img {
+  margin: auto;
+}
 .catalog-list__name {
   color: #00669c;
   margin-bottom: 18px;
   display: inline-block;
   vertical-align: top;
+}
+.catalog-list_big .catalog-list__name {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 23px;
+  display: inline;
 }
 .catalog-list__link:hover .catalog-list__name {
   color: #f9521e;

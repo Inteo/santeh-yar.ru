@@ -3032,6 +3032,7 @@ a:hover .icon-inteo {
 .catalog-list {
   &__holder {
     padding-top: 20px;
+    min-height: 600px;
   }
   &__item {
     margin-bottom: 30px;
@@ -3069,11 +3070,27 @@ a:hover .icon-inteo {
       margin: auto;
     }
   }
+  &_big &__img {
+    width: 100%;
+    height: 156px;
+    & img {
+      margin: 0;
+    }
+    &_center img {
+      margin: auto;
+    }
+  }
   &__name {
     color: #00669c;
     margin-bottom: 18px;
     display: inline-block;
     vertical-align: top;
+  }
+  &_big &__name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 23px;
+    display: inline;
   }
   &__link:hover &__name {
     color: @orange;
