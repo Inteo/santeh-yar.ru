@@ -340,7 +340,7 @@ h1,
   text-transform: uppercase
 }
 p {
-  margin: 0;
+  margin: 0 0 20px;
 }
 .small,
 small {
@@ -2240,6 +2240,51 @@ textarea {
   content: '';
   background: url(../../f/i/icons.png) -9999px -9999px no-repeat
 }
+.icon-pdf {
+  width: 45px;
+  height: 62px;
+  background-position: -234px 0;
+  margin-bottom: 10px;
+}
+a:hover .icon-pdf {
+  background-position: -279px 0;
+}
+.icon-cat {
+  width: 46px;
+  height: 62px;
+  background-position: 0 -18px;
+  margin-bottom: 10px;
+}
+a:hover .icon-cat {
+  background-position: 0 -80px;
+}
+.icon-pass {
+  width: 46px;
+  height: 62px;
+  background-position: 0 -142px;
+  margin-bottom: 10px;
+}
+a:hover .icon-pass {
+  background-position: 0 -204px;
+}
+.icon-project {
+  width: 46px;
+  height: 62px;
+  background-position: -46px -49px;
+  margin-bottom: 10px;
+}
+a:hover .icon-project {
+  background-position: -46px -111px;
+}
+.icon-video {
+  width: 46px;
+  height: 62px;
+  background-position: -92px -49px;
+  margin-bottom: 10px;
+}
+a:hover .icon-video {
+  background-position: -92px -111px;
+}
 .icon-inteo {
   width: 98px;
   height: 17px;
@@ -2294,12 +2339,20 @@ a:hover .icon-inteo {
   line-height: 20px;
   display: inline-block
 }
+.file {
+  line-height: 20px;
+  color: #009acf;
+  text-decoration: underline;
+}
 .wrap {
   min-height: 100%;
   height: auto!important;
   margin: 0 0 -260px;
   min-width: 1000px;
   overflow: hidden;
+}
+.content {
+  min-height: 600px;
 }
 .holder {
   margin: 0 auto;
@@ -2386,6 +2439,7 @@ a:hover .icon-inteo {
     }
   }
   &__cart {
+    margin: 0;
     & a {
       color: #333333;
       text-decoration: underline;
@@ -2418,6 +2472,7 @@ a:hover .icon-inteo {
     font-weight: bold;
     letter-spacing: .025em;
     text-transform: uppercase;
+    margin: 0;
     @media (max-width: 1024px) {
       font-size: 20px;
       letter-spacing: 0;
@@ -2539,6 +2594,7 @@ a:hover .icon-inteo {
   }
   & p {
     line-height: 30px;
+    margin: 0;
   }
   & a {
     line-height: 20px;
@@ -2561,6 +2617,7 @@ a:hover .icon-inteo {
   &__caption {
     line-height: 20px;
     color: #9a9a9a;
+    margin: 0;
   }
   &__btn {
     width: 100%;
@@ -2785,6 +2842,7 @@ a:hover .icon-inteo {
     & p {
       font: 100px 'museo';
       color: @orange;
+      margin: 0;
     }
     & span {
       display: block;
@@ -2827,7 +2885,6 @@ a:hover .icon-inteo {
   &__date {
     color: #cacaca;
     margin-bottom: 5px;
-
   }
   &__name {
     color: #009acf;
@@ -2946,6 +3003,7 @@ a:hover .icon-inteo {
     line-height: 20px;
     color: #009acf;
     font-weight: bold;
+    margin: 0;
   }
   &__price {
     display: block;
@@ -2965,6 +3023,12 @@ a:hover .icon-inteo {
 }
 .section {
   padding: 40px 0;
+}
+.sub-section {
+  padding: 20px 0 0;
+}
+.files {
+  margin-bottom: 20px;
 }
 .switcher {
   position: relative;
@@ -3030,9 +3094,15 @@ a:hover .icon-inteo {
   }
 }
 .catalog-list {
+  &_big {
+    padding-bottom: 0;
+  }
   &__holder {
     padding-top: 20px;
-    min-height: 600px;
+    &_bordered {
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 20px;
+    }
   }
   &__item {
     margin-bottom: 30px;
@@ -3050,6 +3120,9 @@ a:hover .icon-inteo {
         }
       }
     }
+  }
+  &_big &__item {
+    margin-bottom: 20px;
   }
   &__img {
     border: 1px solid #eaeaea;
@@ -3107,7 +3180,6 @@ a:hover .icon-inteo {
   }
   &__address {
     & p {
-      margin-bottom: 20px;
       & span {
         display: block;
         line-height: 20px;
@@ -3141,9 +3213,11 @@ a:hover .icon-inteo {
   &__copyright {
     line-height: 20px;
     color: #fff;
+    margin: 0;
   }
   &__madeby {
     line-height: 20px;
     color: #fff;
+    margin: 0;
   }
 }

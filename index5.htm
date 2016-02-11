@@ -27,21 +27,7 @@
     <script>
     
       $(document).ready(function() {
-       	$('.preface-slider__holder').carouFredSel({
-          align: false,
-          responsive : true, 
-          transition: true, 
-          width: "100%",
-          next: ".preface-slider__nav_next",
-          prev: ".preface-slider__nav_prev",
-          pagination: {
-            container: ".preface-slider__pager"
-          },
-          scroll: {
-            timeoutDuration: 5000,
-            fx: "crossfade"
-          }
-		    });
+       	
       });
     </script>
   </head>
@@ -74,7 +60,7 @@
 	  				</div>
 	  			</div>
 	  			<div class="col-md-4">
-	  				<h1 class="header__title">Оптовая компания<br>инженерной сантехники</h1>
+	  				<p class="header__title">Оптовая компания<br>инженерной сантехники</p>
 	  			</div>
 	  			<div class="col-md-6">
 	  				<p class="header__city">
@@ -313,345 +299,161 @@
   		</div>
   	</header>
   	<div class="content">
-  		<section class="section preface-slider">
-  			<div class="holder">
-  				<div class="preface-slider__wrap">
-						<div class="preface-slider__holder">
-							<div class="preface-slider__item">
-								<img src="f/i/preface-slider/1.jpg" alt="" width="1100" height="310">
-								<div class="preface-slider__text">
-									<p class="preface-slider__title">Бесплатная доставка<br>в соседние регионы:</p>
-									Вологда, Череповец <br>Иваново, Кострома
-								</div>
-							</div>
-							<div class="preface-slider__item">
-								<img src="f/i/preface-slider/2.jpg" alt="" width="1100" height="310">
-							</div>
-							<div class="preface-slider__item">
-								<img src="f/i/preface-slider/1.jpg" alt="" width="1100" height="310">
-							</div>
-						</div>
-						<span class="preface-slider__nav preface-slider__nav_prev"></span>
-						<span class="preface-slider__nav preface-slider__nav_next"></span>
-					</div>
-					<div class="preface-slider__pager"></div>
-  			</div>
-  		</section>
-  		<section class="section catalog catalog_small clearfix">
-  			<div class="holder">
-  				<div class="catalog__holder">
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/1.png" alt="">
-								</span>
-								<span class="catalog__name">Клапаны (вентили)</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/2.png" alt="">
-								</span>
-								<span class="catalog__name">Канализация ПП</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/3.png" alt="">
-								</span>
-								<span class="catalog__name">Краны латунные</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/4.png" alt="">
-								</span>
-								<span class="catalog__name">Краны шаровые стальные</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/5.png" alt="">
-								</span>
-								<span class="catalog__name">Отопительное оборудование</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/6.png" alt="">
-								</span>
-								<span class="catalog__name">Противопожарное оборудование</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/7.png" alt="">
-								</span>
-								<span class="catalog__name">Фильтры, грязевики, элеваторы</span> 
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/8.png" alt="">
-								</span>
-								<span class="catalog__name">Водопровод полипропилен PP-R, металлопластик и PEX</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/9.png" alt="">
-								</span>
-								<span class="catalog__name">Детали трубопровода</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/10.png" alt="">
-								</span>
-								<span class="catalog__name">Задвижки и затворы</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/11.png" alt="">
-								</span>
-								<span class="catalog__name">Измерительные приборы</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/12.png" alt="">
-								</span>
-								<span class="catalog__name">Изоляция</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/13.png" alt="">
-								</span>
-								<span class="catalog__name">Чугунная канализация</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/14.png" alt="">
-								</span>
-								<span class="catalog__name">Сантехника</span>
-							</a>
-  					</div>
-  				</div>
-  			</div>
-  		</section>
-  		<section class="section spec switcher">
-  			<div class="holder">
-					<div class="switcher__control">
-						<span class="switcher__btn switcher__btn_active" data-switch-btn="hits">Хиты продаж</span>
-						<span class="switcher__btn" data-switch-btn="spec">Специальные предложения</span>
-					</div>
-					<div class="switcher__wrap">
-						<div class="row switcher__holder switcher__holder_active" data-switch-hold="hits">
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/1.jpg" alt="">
-									</div>
-									<p class="spec__name">Краны 11б18бк
-										<span class="spec__price"><span>от </span>188,00 <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/2.jpg" alt="">
-									</div>
-									<p class="spec__name">Клапаны запорные
-
-										<span class="spec__price"><span>от </span> 170,34  <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/3.jpg" alt="">
-									</div>
-									<p class="spec__name">Фильтры ФМФ
-										<span class="spec__price"><span>от </span> 2024,33 <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/4.jpg" alt="">
-									</div>
-									<p class="spec__name">Краны КРДП
-										<span class="spec__price"><span>от  </span>241,32 <span> руб.</span></span>
-									</p>
+  		<section class="section catalog-list catalog-list_big">
+	  		<div class="holder">
+	  			<ul class="breadcrumbs">
+	  				<li><a href="/">Главная</a></li><li>
+	  					<a href="#">Каталог продукции</a>
+	  				</li><li><a href="#">Водопровод полипропилен PP-R, металлопластик и PEX</a>
+	  				</li><li><span>Водопровод полипропиленовый РВК</span></li>
+	  			</ul>
+	  			<h1 class="h2">Водопровод полипропиленовый РВК</h1>
+	  			<div class="row catalog-list__holder">
+	  				<div class="col-md-5">
+	  					<div class="catalog-list__item">
+								<a href="#" class="catalog-list__link">
+									<span class="catalog-list__img catalog-list__img_center">
+										<img src="f/i/catalog-list/12.jpg" alt="">
+									</span><br>
+									<span class="catalog-list__name">Бурты ПП РВК</span>
 								</a>
 							</div>
 	  				</div>
-	  				<div class="row switcher__holder" data-switch-hold="spec">
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/4.jpg" alt="">
-									</div>
-									<p class="spec__name">Краны КРДП
-										<span class="spec__price"><span>от  </span>241,32 <span> руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/1.jpg" alt="">
-									</div>
-									<p class="spec__name">Краны 11б18бк
-										<span class="spec__price"><span>от </span>188,00 <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/2.jpg" alt="">
-									</div>
-									<p class="spec__name">Клапаны запорные
-										<span class="spec__price"><span>от </span> 170,34  <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/3.jpg" alt="">
-									</div>
-									<p class="spec__name">Фильтры ФМФ
-										<span class="spec__price"><span>от </span> 2024,33 <span>руб.</span></span>
-									</p>
+	  				<div class="col-md-5">
+							<div class="catalog-list__item">
+								<a href="#" class="catalog-list__link">
+									<span class="catalog-list__img catalog-list__img_center">
+										<img src="f/i/catalog-list/13.jpg" alt="">
+									</span><br>
+									<span class="catalog-list__name">Вентили ПП РВК</span>
 								</a>
 							</div>
 	  				</div>
+	  				<div class="col-md-5">
+							<div class="catalog-list__item">
+								<a href="#" class="catalog-list__link">
+									<span class="catalog-list__img catalog-list__img_center">
+										<img src="f/i/catalog-list/14.jpg" alt="">
+									</span><br>
+									<span class="catalog-list__name">Заглушки резьбовые ПП РВК</span>
+								</a>
+							</div>
+	  				</div>
+	  				<div class="col-md-5">
+							<div class="catalog-list__item">
+								<a href="#" class="catalog-list__link">
+									<span class="catalog-list__img catalog-list__img_center">
+										<img src="f/i/catalog-list/15.jpg" alt="">
+									</span><br>
+									<span class="catalog-list__name">Кран шаровый ПП РВК</span>
+								</a>
+							</div>
+	  				</div>
+	  			</div>
+	  			<div class="row catalog-list__holder catalog-list__holder_bordered">
+	  				<div class="col-md-5">
+	  					<div class="catalog-list__item">
+								<a href="#" class="catalog-list__link">
+									<span class="catalog-list__img catalog-list__img_center">
+										<img src="f/i/catalog-list/16.jpg" alt="">
+									</span><br>
+									<span class="catalog-list__name">Бурты ПП РВК</span>
+								</a>
+							</div>
+	  				</div>
+	  				<div class="col-md-5">
+							<div class="catalog-list__item">
+								<a href="#" class="catalog-list__link">
+									<span class="catalog-list__img catalog-list__img_center">
+										<img src="f/i/catalog-list/17.jpg" alt="">
+									</span><br>
+									<span class="catalog-list__name">Вентили ПП РВК</span>
+								</a>
+							</div>
+	  				</div>
+	  				<div class="col-md-5">
+							<div class="catalog-list__item">
+								<a href="#" class="catalog-list__link">
+									<span class="catalog-list__img catalog-list__img_center">
+										<img src="f/i/catalog-list/0.jpg" alt="">
+									</span><br>
+									<span class="catalog-list__name">Муфта ПП с накидной гайкой РВК</span>
+								</a>
+							</div>
+	  				</div>
+	  				<div class="col-md-5">
+							<div class="catalog-list__item">
+								<a href="#" class="catalog-list__link">
+									<span class="catalog-list__img catalog-list__img_center">
+										<img src="f/i/catalog-list/0.jpg" alt="">
+									</span><br>
+									<span class="catalog-list__name">Муфты комбинированные ВР РВК</span>
+								</a>
+							</div>
+	  				</div>
+	  			</div>
+	  		</div>
+  		</section>
+  		<section class="section">
+  			<div class="holder">
+  				<h2>Сертификаты</h2>
+  				<p>Помимо собственной испытательной лаборатории РВК использует ресурсы ведущих испытательных Институтов страны для тестирования своей продукции на предмет долгосрочной эксплуатации.</p>
+					<p>В частности, вся продукция РВК проходит регулярную сертификацию в НИИ Сантехники (г.Москва).</p>
+					<p>Обязательная сертификация на данную продукцию не требуется, это наша личная инициатива, которая является дополнительной гарантией надежности труб и фитингов РВК для наших партнеров.</p>
+					<div class="row sub-section files">
+						<div class="col-md-5">
+							<a href="#" class="file"><i class="icon-pdf"></i><br>Сертификат соответствия <br>на трубы и соединительные<br> детали РВК</a>
+						</div>
+						<div class="col-md-5">
+							<a href="#" class="file"><i class="icon-pdf"></i><br>Сертификат соответствия<br> на трубы, армированные стекловолокном</a>
+						</div>
+						<div class="col-md-5">
+							<a href="#" class="file"><i class="icon-pdf"></i><br>Сертификат соответствия <br>на трубы, армированные стекловолокном</a>
+						</div>
+						<div class="col-md-5">
+							<a href="#" class="file"><i class="icon-pdf"></i><br>Сертификат соответствия <br>на запорную арматуру</a>
+						</div>
 					</div>
-  			</div>
-  		</section>
-  		<section class="section producers clearfix">
-  			<div class="holder">
-  				<h2>Производители</h2>
-  				<div class="producers__holder">
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/1.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/2.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/3.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/4.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/5.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/6.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/7.jpg" alt=""></a>
-  					</div>
-  				</div>
-  			</div>
-  		</section>
-  		<section class="section news">
-  			<div class="holder">
-  				<h2>Новости</h2>
-  				<div class="row">
+					<div class="sub-section">
+						<h2>Гарантия и страховка</h2>
+						<p>Технология производства полимерных труб и фитингов такова, что при использовании гарантированно качественного сырья и комплектующих, соблюдении технологии производства и качественного монтажа изделия будут служить заявляемые производителем 50 лет на холодной воде и 25 лет — на горячей.</p>
+						<p>Не стоит также забывать, что срок службы готовых систем водоснабжения или отопления на 70% зависит от качества монтажа.</p>
+						<p>Именно поэтому мы намеренно не заявляем конкретные сроки гарантии, концентрируясь на качестве выпускаемых нами труб и фитингов.</p>
+						<p>Готовые системы водоснабжения и отопления РВК застрахованы на 5 миллионов рублей. Это значит, что при возникновении страхового случая на объекте всю ответственность РВК берет на себя.</p>
+					</div>
+					<div class="sub-section">
+						<h2>Техническая документация</h2>
+						<p>На нашу продукцию имеется вся необходимая документация на русском языке. Мы оформили ее так, чтобы она была понятной и доступной как практикующим монтажникам, так и представителям крупных организаций и торговых сетей.</p>
+						<p>В помощь монтажникам и всем пользователям продукции РВК разработаны специальные иллюстрированные пособия, справочные материалы и схемы.</p>
+					</div>
+					<div class="row sub-section files">
 						<div class="col-md-5">
-							<div class="news__item">
-								<div class="news__img">
-									<img src="f/i/news/1.jpg" alt="">
-								</div>
-								<p class="news__date">20.10.2015</p>
-								<a href="#" class="news__name">Поступление радиаторов Heaton</a>
-							</div>
+							<a href="#" class="file"><i class="icon-cat"></i><br>Каталог РВК</a>
 						</div>
 						<div class="col-md-5">
-							<div class="news__item">
-								<div class="news__img">
-									<img src="f/i/news/2.jpg" alt="">
-								</div>
-								<p class="news__date">20.10.2015</p>
-								<a href="#" class="news__name">Поступление радиаторов Heaton</a>
-							</div>
+							<a href="#" class="file"><i class="icon-pdf"></i><br>Техническое руководство</a>
 						</div>
 						<div class="col-md-5">
-							<div class="news__item">
-								<div class="news__img">
-									<img src="f/i/news/3.jpg" alt="">
-								</div>
-								<p class="news__date">20.10.2015</p>
-								<a href="#" class="news__name">Поступление радиаторов Heaton</a>
-							</div>
+							<a href="#" class="file"><i class="icon-pass"></i><br>Паспорт на запорную<br>арматуру</a>
 						</div>
 						<div class="col-md-5">
-							<div class="news__item">
-								<div class="news__img">
-									<img src="f/i/news/4.jpg" alt="">
-								</div>
-								<p class="news__date">20.10.2015</p>
-								<a href="#" class="news__name">Поступление радиаторов Heaton</a>
-							</div>
+							<a href="#" class="file"><i class="icon-pass"></i><br>Паспорт на фитинги<br>полипропиленовые</a>
 						</div>
-  				</div>
-  			</div>
-  		</section>
-  		<section class="section achiv">
-  			<div class="holder">
-  				<h2>О компании</h2>
-	  			<p class="achiv__text">Мы всегда рады видеть вас в нашем уютном, гостеприимном офисе. Специалисты нашей компании с удовольствием расскажут вам обо всей имеющейся продукции и помогут выбрать то, что вам нужно.</p>
-  				<div class="row">
-  					<div class="col-md-4">
-							<div class="achiv__item">
-								<p>8</p>
-								<span>лет на рынке</span>
-							</div>
-  					</div>
-  					<div class="col-md-4">
-							<div class="achiv__item">
-								<p>3</p>
-								<span>филиала в России</span>
-							</div>
-  					</div>
-  					<div class="col-md-6">
-							<div class="achiv__item">
-								<p>500</p>
-								<i>м2</i>
-								<span>площадь складских<br>помещений компании</span>
-							</div>
-  					</div>
-  					<div class="col-md-6">
-							<div class="achiv__item">
-								<p>2000</p>
-								<span>количество позиций товара, имеющегося в наличии</span>
-							</div>
-  					</div>
-  				</div>
+					</div>
+					<div class="row sub-section files">
+						<div class="col-md-5">
+							<a href="#" class="file"><i class="icon-pass"></i><br>Паспорт на трубу<br>металлополимерную<br>SPECIAL</a>
+						</div>
+						<div class="col-md-5">
+							<a href="#" class="file"><i class="icon-pass"></i><br>Паспорт на трубу<br>полипропиленовую</a>
+						</div>
+						<div class="col-md-5">
+							<a href="#" class="file"><i class="icon-project"></i><br>Проектирование</a>
+						</div>
+						<div class="col-md-5">
+							<a href="#" class="file"><i class="icon-video"></i><br>Видеоролик по монтажу<br>труб и фитингов РВК</a>
+						</div>
+					</div>
   			</div>
   		</section>
   	</div>
