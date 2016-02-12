@@ -16,8 +16,10 @@
     <script src="f/js/bootstrap.min.js"></script>
     <script src="f/js/jquery.transit.min.js"></script>
     <script src="f/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="f/js/jquery.mCustomScrollbar.js"></script>
     <script src="f/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
     <link rel="stylesheet" href="f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
+		<link rel="stylesheet" href="f/css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="f/css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <!--[if IE]>
@@ -25,10 +27,47 @@
     <![endif]-->
     <script src="f/js/common.js"></script>
     <script>
-    
+     globalOffset = 0;
+    	 function gallerify() {
+			   $(".gallery").each(function(index) {
+			     var off = globalOffset;
+			     if (off == 0) {
+			       off = $(this).offset().left;
+			     }
+			     var total_width = 0;
+			     var margins = 0;
+			     var gallery_width = $(this).width();
+			     $(this).children().find("[class*='__item']").each(function() {
+			     	$(this).width(gallery_width / 4 - 20);
+			       total_width = total_width + $(this).width();
+			       margins = margins + parseInt($(this).css("margin-left")) + parseInt($(this).css("margin-right"));
+			     })
+
+			     $(this).find(".gallery__holder").width(total_width + margins);
+			     var gwidth = $(window).width() - off,
+			       ghwidth = $(this).find(".gallery__holder").width();
+			     $(this).find(".gallery__holder").width(ghwidth + 20);
+			     /*$(this).width(gwidth);*/
+			     $(this).width(gallery_width);
+			     $(this).mCustomScrollbar({
+			       axis: "x",
+			       scrollbarPosition: "inside",
+			       scrollInertia: 200,
+			       autoDraggerLength: false,
+	          callbacks:{
+	            onScrollStart:function(){ if ($(this).next().is(':hidden')) {$(this).next().fadeIn(); }},
+	            onTotalScroll:function(){  $(this).next().fadeOut();},
+	          }
+	          });
+			   });
+			 }
       $(document).ready(function() {
-       	
+      	gallerify()
       });
+       $(window).resize(function() {
+			   globalOffset = 0;
+			   gallerify();
+			 });
     </script>
   </head>
 <body>
@@ -302,169 +341,70 @@
   		<section class="section">
 	  		<div class="holder">
 	  			<ul class="breadcrumbs">
-	  				<li><a href="/">Главная</a></li><li>
-	  					<a href="#">Клапаны (вентили)</span>
-	  				</li><li><span>Клапаны запорные</span></li>
+	  				<li><a href="/">Главная</a>
+	  				</li><li><span>О компании</span></li>
 	  			</ul>
-	  			<h1 class="h2">Клапаны запорные БАЗ</h1>
-	  			<div class="goods">
-	  				<div class="goods__holder">
-	  					<div class="row goods__row">
-		  					<div class="col-md-4">
-									<div class="goods__img">
-										<img src="f/i/spec/2.jpg" alt="">
-									</div>
-		  					</div>
-		  					<div class="col-md-16">
-		  						<div class="goods__detail">
-		  							<p class="goods__subtitle">Технические характеристики:</p>
-		  							<div class="goods-features">
-		  								<div class="goods-features__tb">
-			  								<div class="goods-features__row">
-			  									<div class="goods-features__cell">
-			  										Среда
-			  									</div>
-			  									<div class="goods-features__cell">
-			  										вода при температуре до 200 °С.
-			  									</div>
-			  								</div>
-			  								<div class="goods-features__row">
-			  									<div class="goods-features__cell">
-			  										Давление номинальное PN, (кг/с м²)
-			  									</div>
-			  									<div class="goods-features__cell">
-			  										16
-			  									</div>
-			  								</div>
-			  								<div class="goods-features__row">
-			  									<div class="goods-features__cell">
-			  										Присоединение к трубопроводу
-			  									</div>
-			  									<div class="goods-features__cell">
-			  										муфтовое
-			  									</div>
-			  								</div>
-			  								<div class="goods-features__row">
-			  									<div class="goods-features__cell">
-			  										Материал корпуса
-			  									</div>
-			  									<div class="goods-features__cell">
-			  										латунь ЛЦ40С
-			  									</div>
-			  								</div>
-			  								<div class="goods-features__row">
-			  									<div class="goods-features__cell">
-			  										Материал уплотнения затвора
-			  									</div>
-			  									<div class="goods-features__cell">
-			  										паронит БР-3
-			  									</div>
-			  								</div>
-			  								<div class="goods-features__row">
-			  									<div class="goods-features__cell">
-			  										Класс герметичности по ГОСТ 9544-93
-			  									</div>
-			  									<div class="goods-features__cell">
-			  										«В»
-			  									</div>
-			  								</div>
-			  								<div class="goods-features__row">
-			  									<div class="goods-features__cell">
-			  										Привод
-			  									</div>
-			  									<div class="goods-features__cell">
-			  										ручной
-			  									</div>
-			  								</div>
-			  								<div class="goods-features__row">
-			  									<div class="goods-features__cell">
-			  										Тип рукоятки
-			  									</div>
-			  									<div class="goods-features__cell">
-			  										маховик
-			  									</div>
-			  								</div>
-		  								</div>
-		  							</div>
-										<p>Компания «Технология» предлагает трубопроводную запорную арматуру, полностью соответствующую требованиям Госстандарта — клапан 15б1п. Клапан 15б1п изготовлен из латуни и используется при температуре не более 200 °C и давлении 1,6 МПа, имеет муфтовый тип присоединения. Клапан 15б1п может эксплуатироваться в таких средах, как пар и вода. Клапан 15б1п отличается надёжностью, прочностью и долговечностью эксплуатации, используется в разных сферах, в том числе на промышленных производствах, системах горячего и холодного водоснабжения. При установке необходимо обратить внимание на положение маховика – исключается направление вниз. Клапан 15б1п устойчив к механическим воздействиям, повышенной влажности (за счёт использования прокладок из фторопласта), коррозии (за счёт покрытия специальным слоем). «Технология» предлагает запорную трубопроводную арматуру разных диаметров.</p>
-		  						</div>
-		  					</div>
-		  				</div>
-		  				<div class="goods__row row">
-		  					<div class="goods-cart">
-		  						<div class="goods-cart__tb">
-			  						<div class="row goods-cart__row goods-cart__head">
-			  							<div class="goods-cart__cell col-md-10">
-			  								Наименование
-			  							</div>
-			  							<div class="goods-cart__cell col-md-5">
-			  								Розница с НДС
-			  							</div>
-			  							<div class="goods-cart__cell col-md-5">
-			  								Количество
-			  							</div>
-			  						</div>
-			  						<div class="row goods-cart__row">
-			  							<div class="goods-cart__cell col-md-10 goods-cart__name">
-			  								<a href="#">Клапан запорный БАЗ 15б1п, Ду 15 Ру16 м/м А200 мм</a>
-			  							</div>
-			  							<div class="goods-cart__cell col-md-5 goods-cart__price">
-			  								170,34 руб./шт
-			  							</div>
-			  							<div class="goods-cart__cell col-md-3 goods-cart__amount">
-			  								<input type="text" value="1">
-			  							</div>
-			  							<div class="goods-cart__cell col-md-2 goods-cart__btn">
-			  								<a href="#"><i class="icon-cart2"></i></a>
-			  							</div>
-			  						</div>
-			  						<div class="row goods-cart__row">
-			  							<div class="goods-cart__cell col-md-10 goods-cart__name">
-			  								<a href="#">Клапан запорный БАЗ 15б1п, Ду 20 Ру16 м/м А200 мм</a>
-			  							</div>
-			  							<div class="goods-cart__cell col-md-5 goods-cart__price">
-			  								229,38 руб./шт
-			  							</div>
-			  							<div class="goods-cart__cell col-md-3 goods-cart__amount">
-			  								<input type="text" value="1">
-			  							</div>
-			  							<div class="goods-cart__cell col-md-2 goods-cart__btn">
-			  								<a href="#"><i class="icon-cart2"></i></a>
-			  							</div>
-			  						</div>
-			  						<div class="row goods-cart__row">
-			  							<div class="goods-cart__cell col-md-10 goods-cart__name">
-			  								<a href="#">Клапан запорный БАЗ 15б1п, Ду 25 Ру16 м/м А200 мм</a>
-			  							</div>
-			  							<div class="goods-cart__cell col-md-5 goods-cart__price">
-			  								265 029,00 руб./шт
-			  							</div>
-			  							<div class="goods-cart__cell col-md-3 goods-cart__amount">
-			  								<input type="text" value="1">
-			  							</div>
-			  							<div class="goods-cart__cell col-md-2 goods-cart__btn">
-			  								<a href="#"><i class="icon-cart2"></i></a>
-			  							</div>
-			  						</div>
-		  						</div>
-		  					</div>
-		  				</div>
-		  				<div class="row sub-section">
-		  					<div class="col-md-5">
-		  						<a href="#" class="file"><i class="icon-pdf"></i><br>Сертификат<br>соответствия</a>
-		  					</div>
-		  					<div class="col-md-5">
-		  						<a href="#" class="file"><i class="icon-med"></i><br>Санитарно<br>-эпидемиологическое<br>заключение</a>
-		  					</div>
-		  					<div class="col-md-5">
-		  						<a href="#" class="file"><i class="icon-pass"></i><br>Паспорт</a>
-		  					</div>
-		  					<div class="col-md-5">
-		  						<a href="#" class="file"><i class="icon-promo"></i><br>Рекламная листовка</a>
-		  					</div>
-		  				</div>
-	  				</div>
-	  			</div>
+	  			<h1 class="h2">О компании</h1>
+	  			<div class="sub-section">
+		  			<p>C июня 2008 года было открыто новое направление нашей деятельности — торговля инженерной сантехникой. Для этого мы организовали офис и складпо адресу г. Ярославль Полушкина роща д. 1 а так же набрали команду специалистов для более качественного и оперативного обслуживания клиентов.</p>
+		  			<p>На сегодняшний день мы стали одним из крупнейших поставщиков инженерной сантехники в Верхневолжском регионе. Нашими партнерами являются такие крупные предприятия как: Vesbo, ЗАО  «Муромский завод трубопроводной арматуры», ОАО  «Бологовский арматурный завод», ООО  «Олбризсервис», ОАО  «Завод водоприбор», ООО  «ПластФитинг», и многие другие производители качественной и востребованной продукции. Весь ассортимент предлагаемого нами товара: задвижки чугунные, задвижки стальные, затворы, краны шаровые стальные, краны шаровые латунные, фланцы, отводы, трубы полипропиленовые для водопровода и канализации, счетчики воды, манометры, термометры, люки канализационные, трубы чугунные и фитинги для канализации и многое другое, находиться на складе в Ярославле, что является одним из важнейших факторов для наших клиентов. Так же мы организуем доставку до склада покупателя. Делайте заявки, и Вы будете приятно удивлены ассортиментом и ценами. Ждем Вас у нас!</p>
+		  			<p>Мы всегда рады видеть вас в нашем уютном, гостеприимном офисе. Специалисты нашей компании с удовольствием расскажут вам обо всей имеющейся продукции и помогут выбрать то, что вам нужно.</p>
+					</div>
+					<div class="sub-section achiv">
+	  				<div class="row">
+	  					<div class="col-md-4">
+								<div class="achiv__item">
+									<p>8</p>
+									<span>лет на рынке</span>
+								</div>
+	  					</div>
+	  					<div class="col-md-4">
+								<div class="achiv__item">
+									<p>3</p>
+									<span>филиала в России</span>
+								</div>
+	  					</div>
+	  					<div class="col-md-6">
+								<div class="achiv__item">
+									<p>500</p>
+									<i>м2</i>
+									<span>площадь складских<br>помещений компании</span>
+								</div>
+	  					</div>
+	  					<div class="col-md-6">
+								<div class="achiv__item">
+									<p>2000</p>
+									<span>количество позиций товара, имеющегося в наличии</span>
+								</div>
+	  					</div>
+		  			</div>
+  				</div>
+  				<h2>Наши сертификаты</h2>
+  				<div class="certif gallery">
+  					<div class="certif__holder gallery__holder">
+							<a href="#" class="certif__item">
+								<img src="f/i/certif/1.jpg" alt="">
+							</a><a href="#" class="certif__item">
+								<img src="f/i/certif/2.jpg" alt="">
+							</a><a href="#" class="certif__item">
+								<img src="f/i/certif/3.jpg" alt="">
+							</a><a href="#" class="certif__item">
+								<img src="f/i/certif/4.jpg" alt="">
+							</a><a href="#" class="certif__item">
+								<img src="f/i/certif/1.jpg" alt="">
+							</a><a href="#" class="certif__item">
+								<img src="f/i/certif/2.jpg" alt="">
+							</a><a href="#" class="certif__item">
+								<img src="f/i/certif/3.jpg" alt="">
+							</a><a href="#" class="certif__item">
+								<img src="f/i/certif/4.jpg" alt="">
+							</a><a href="#" class="certif__item">
+								<img src="f/i/certif/1.jpg" alt="">
+							</a><a href="#" class="certif__item">
+								<img src="f/i/certif/2.jpg" alt="">
+							</a>
+  					</div>
+  				</div>
 	  		</div>
   		</section>
   	</div>

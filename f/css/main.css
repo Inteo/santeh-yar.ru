@@ -3000,6 +3000,9 @@ a:hover .icon-inteo {
   height: 12px;
   margin: auto;
 }
+.achiv {
+  margin-bottom: 40px;
+}
 .achiv__text {
   margin-bottom: 20px;
   color: #303030;
@@ -3187,7 +3190,7 @@ a:hover .icon-inteo {
   padding: 40px 0;
 }
 .sub-section {
-  padding: 20px 0 0;
+  padding: 15px 0 0;
 }
 .files {
   margin-bottom: 20px;
@@ -3416,6 +3419,26 @@ a:hover .icon-inteo {
 }
 .goods-cart__btn {
   text-align: center;
+}
+.certif {
+  padding-top: 25px;
+}
+.certif__item {
+  height: 240px;
+  border: 1px solid #eaeaea;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+.certif__item img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .footer {
   min-height: 260px;
