@@ -308,6 +308,7 @@ h2 {
   color: #009acf;
   margin-bottom: 20px;
   text-transform: none;
+  letter-spacing: .050em;
 }
 .h2 img,
 h2 img {
@@ -2372,6 +2373,29 @@ textarea {
   content: '';
   background: url(../../f/i/icons.png) -9999px -9999px no-repeat;
 }
+.icon-cart2 {
+  width: 16px;
+  height: 17px;
+  background-position: -193px -29px;
+}
+.icon-med {
+  width: 45px;
+  height: 62px;
+  background-position: -46px -173px;
+  margin-bottom: 10px;
+}
+a:hover .icon-med {
+  background-position: -91px -173px;
+}
+.icon-promo {
+  width: 45px;
+  height: 62px;
+  background-position: -46px -235px;
+  margin-bottom: 10px;
+}
+a:hover .icon-promo {
+  background-position: -91px -235px;
+}
 .icon-pdf {
   width: 45px;
   height: 62px;
@@ -3308,6 +3332,90 @@ a:hover .icon-inteo {
 }
 .catalog-list__link:hover .catalog-list__name {
   color: #f9521e;
+}
+.goods {
+  padding: 20px 0;
+}
+.goods__holder {
+  border: 1px solid #eaeaea;
+  padding: 35px 90px;
+}
+.goods__img img {
+  max-width: 100%;
+}
+.goods__detail {
+  border-left: 1px solid #eaeaea;
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+.goods__row {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 30px;
+}
+.goods__subtitle {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 25px;
+}
+.goods-features {
+  margin-left: -20px;
+  margin-bottom: 30px;
+  margin-right: -40px;
+}
+.goods-features__tb {
+  display: table;
+  width: 100%;
+}
+.goods-features__row {
+  display: table-row;
+}
+.goods-features__row:nth-of-type(odd) {
+  background: #fafafa;
+}
+.goods-features__cell {
+  display: table-cell;
+  width: 50%;
+  color: #000;
+  padding: 6px 0 6px 20px;
+}
+.goods-cart {
+  margin-bottom: 40px;
+}
+.goods-cart__tb {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.goods-cart__head .goods-cart__cell {
+  color: #9a9a9a;
+}
+.goods-cart__row {
+  padding-left: 15px;
+  min-height: 30px;
+}
+.goods-cart__row:nth-of-type(even) {
+  background: #fafafa;
+}
+.goods-cart__cell {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.goods-cart__name a {
+  color: #009acf;
+}
+.goods-cart__name a:hover {
+  color: #f9521e;
+}
+.goods-cart__amount {
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+.goods-cart__amount input {
+  width: 60px;
+  height: 26px;
+  padding-left: 20px;
+}
+.goods-cart__btn {
+  text-align: center;
 }
 .footer {
   min-height: 260px;
