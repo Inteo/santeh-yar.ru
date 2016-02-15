@@ -984,7 +984,8 @@ fieldset[disabled] .btn-link:hover {
 .pager li:first-child {
   border-left: 1px solid #eaeaea;
 }
-.pager li a {
+.pager li a,
+.pager li span {
   color: #303030;
   line-height: 30px;
   display: block;
@@ -997,7 +998,7 @@ fieldset[disabled] .btn-link:hover {
   background: #f9521e;
   border-color: #f9521e;
 }
-.pager li.active a {
+.pager li.active span {
   color: #fff;
 }
 .close {
@@ -2649,6 +2650,8 @@ a:hover .icon-inteo {
   margin-left: 20px;
   line-height: 20px;
   position: relative;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 .breadcrumbs li a,
 .breadcrumbs li span {
@@ -2659,12 +2662,14 @@ a:hover .icon-inteo {
 }
 .breadcrumbs li:before {
   position: absolute;
+  background: transparent;
+  border-radius: 0;
   content: '';
   width: 5px;
   height: 5px;
   top: 0;
   bottom: 0;
-  left: -13px;
+  left: -12px;
   margin: auto 0;
   -ms-transform: rotate(225deg);
   -webkit-transform: rotate(225deg);
@@ -2700,6 +2705,9 @@ a:hover .icon-inteo {
   margin: 0;
   line-height: 20px;
   margin-left: 25px;
+}
+.header__menu ul li:before {
+  display: none;
 }
 .header__menu ul li a {
   color: #333333;
@@ -3036,6 +3044,9 @@ a:hover .icon-inteo {
 }
 .catalog-menu-sub ul li {
   border-bottom: 1px solid #e9e9e9;
+}
+.catalog-menu-sub ul li:before {
+  display: none;
 }
 .catalog-menu-sub ul li a {
   font-size: 13px;
@@ -3404,6 +3415,9 @@ a:hover .icon-inteo {
 .catalog-list__item ul li {
   padding-left: 15px;
   margin-bottom: 15px;
+}
+.catalog-list__item ul li:before {
+  display: none;
 }
 .catalog-list__item ul li a {
   color: #000;
@@ -3788,6 +3802,9 @@ a:hover .icon-inteo {
 .footer__menu li {
   line-height: 20px;
   margin-bottom: 20px;
+}
+.footer__menu li:before {
+  display: none;
 }
 .footer__menu li a {
   color: #fff;
