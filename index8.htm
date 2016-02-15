@@ -16,32 +16,38 @@
     <script src="f/js/bootstrap.min.js"></script>
     <script src="f/js/jquery.transit.min.js"></script>
     <script src="f/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="f/js/jquery.mCustomScrollbar.js"></script>
     <script src="f/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
     <link rel="stylesheet" href="f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
+		<link rel="stylesheet" href="f/css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="f/css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <!--[if IE]>
     <link rel="stylesheet" href="f/css/ie.css">
     <![endif]-->
     <script src="f/js/common.js"></script>
     <script>
-    
-      $(document).ready(function() {
-       	$('.preface-slider__holder').carouFredSel({
-          align: false,
-          responsive : true, 
-          transition: true, 
-          width: "100%",
-          next: ".preface-slider__nav_next",
-          prev: ".preface-slider__nav_prev",
-          pagination: {
-            container: ".preface-slider__pager"
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+            center: [57.646071, 39.874171],
+            zoom: 16,
+            controls: [],
+          }),
+          Placemark1 = new ymaps.Placemark([57.646071, 39.876171], {
+            hintContent: '',
+            balloonContent: ''
           },
-          scroll: {
-            timeoutDuration: 5000,
-            fx: "crossfade"
-          }
-		    });
+          {
+            iconLayout: 'default#image',
+            iconImageHref: 'f/i/marker.png',
+            iconImageSize: [80, 104],
+            iconImageOffset: [-40, -104]
+          });
+        myMap.geoObjects.add(Placemark1);
+       });
+      $(document).ready(function() {
+
       });
     </script>
   </head>
@@ -74,7 +80,7 @@
 	  				</div>
 	  			</div>
 	  			<div class="col-md-4">
-	  				<h1 class="header__title">Оптовая компания<br>инженерной сантехники</h1>
+	  				<p class="header__title">Оптовая компания<br>инженерной сантехники</p>
 	  			</div>
 	  			<div class="col-md-6">
 	  				<p class="header__city">
@@ -312,347 +318,108 @@
   			</div>
   		</div>
   	</header>
-  	<div class="content">
-  		<section class="section preface-slider">
-  			<div class="holder">
-  				<div class="preface-slider__wrap">
-						<div class="preface-slider__holder">
-							<div class="preface-slider__item">
-								<img src="f/i/preface-slider/1.jpg" alt="" width="1100" height="310">
-								<div class="preface-slider__text">
-									<p class="preface-slider__title">Бесплатная доставка<br>в соседние регионы:</p>
-									Вологда, Череповец <br>Иваново, Кострома
-								</div>
-							</div>
-							<div class="preface-slider__item">
-								<img src="f/i/preface-slider/2.jpg" alt="" width="1100" height="310">
-							</div>
-							<div class="preface-slider__item">
-								<img src="f/i/preface-slider/1.jpg" alt="" width="1100" height="310">
-							</div>
+  	<div class="content"> 
+  		<section class="section contacts">
+	  		<div class="holder">
+	  			<ul class="breadcrumbs">
+	  				<li><a href="/">Главная</a>
+	  				</li><li><span>Контактная информация</span></li>
+	  			</ul>
+	  			<h1 class="h2">Контактная информация</h1>
+	  			<div class="switcher">
+	  				<div class="switcher__control">
+							<span class="switcher__btn switcher__btn_active">Ярославль</span>
+							<a href="#" class="switcher__btn">Перьм</a>
+							<a href="#" class="switcher__btn">Иваново</a>
+							<a href="#" class="switcher__btn">Казань</a>
 						</div>
-						<span class="preface-slider__nav preface-slider__nav_prev"></span>
-						<span class="preface-slider__nav preface-slider__nav_next"></span>
-					</div>
-					<div class="preface-slider__pager"></div>
-  			</div>
-  		</section>
-  		<section class="section catalog catalog_small clearfix">
-  			<div class="holder">
-  				<div class="catalog__holder">
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/1.png" alt="">
-								</span>
-								<span class="catalog__name">Клапаны (вентили)</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/2.png" alt="">
-								</span>
-								<span class="catalog__name">Канализация ПП</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/3.png" alt="">
-								</span>
-								<span class="catalog__name">Краны латунные</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/4.png" alt="">
-								</span>
-								<span class="catalog__name">Краны шаровые стальные</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/5.png" alt="">
-								</span>
-								<span class="catalog__name">Отопительное оборудование</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/6.png" alt="">
-								</span>
-								<span class="catalog__name">Противопожарное оборудование</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/7.png" alt="">
-								</span>
-								<span class="catalog__name">Фильтры, грязевики, элеваторы</span> 
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/8.png" alt="">
-								</span>
-								<span class="catalog__name">Водопровод полипропилен PP-R, металлопластик и PEX</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/9.png" alt="">
-								</span>
-								<span class="catalog__name">Детали трубопровода</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/10.png" alt="">
-								</span>
-								<span class="catalog__name">Задвижки и затворы</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/11.png" alt="">
-								</span>
-								<span class="catalog__name">Измерительные приборы</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/12.png" alt="">
-								</span>
-								<span class="catalog__name">Изоляция</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/13.png" alt="">
-								</span>
-								<span class="catalog__name">Чугунная канализация</span>
-							</a>
-  					</div>
-  					<div class="catalog__item">
-							<a href="#">
-								<span class="catalog__img">
-									<img src="f/i/catalog/14.png" alt="">
-								</span>
-								<span class="catalog__name">Сантехника</span>
-							</a>
-  					</div>
-  				</div>
-  			</div>
-  		</section>
-  		<section class="section spec switcher switcher_active">
-  			<div class="holder">
-					<div class="switcher__control">
-						<span class="switcher__btn switcher__btn_active" data-switch-btn="hits">Хиты продаж</span>
-						<span class="switcher__btn" data-switch-btn="spec">Специальные предложения</span>
-					</div>
-					<div class="switcher__wrap">
-						<div class="row switcher__holder switcher__holder_active" data-switch-hold="hits">
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/1.jpg" alt="">
-									</div>
-									<p class="spec__name">Краны 11б18бк
-										<span class="spec__price"><span>от </span>188,00 <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/2.jpg" alt="">
-									</div>
-									<p class="spec__name">Клапаны запорные
-
-										<span class="spec__price"><span>от </span> 170,34  <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/3.jpg" alt="">
-									</div>
-									<p class="spec__name">Фильтры ФМФ
-										<span class="spec__price"><span>от </span> 2024,33 <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/4.jpg" alt="">
-									</div>
-									<p class="spec__name">Краны КРДП
-										<span class="spec__price"><span>от  </span>241,32 <span> руб.</span></span>
-									</p>
-								</a>
-							</div>
+	  			</div>
+	  			<p>Ваш регион: <a href="#" class="underline">Ярославская область</a></p>
+	  			<p>Обслуживается филиалом в городе: Ярославль</p>
+	  			<div class="row">
+	  				<div class="col-md-5 contacts__item">
+							<p class="iconize-marker">г. Ярославль,<br> ул. Полушкина Роща, д. 1</p>
 	  				</div>
-	  				<div class="row switcher__holder" data-switch-hold="spec">
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/4.jpg" alt="">
-									</div>
-									<p class="spec__name">Краны КРДП
-										<span class="spec__price"><span>от  </span>241,32 <span> руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/1.jpg" alt="">
-									</div>
-									<p class="spec__name">Краны 11б18бк
-										<span class="spec__price"><span>от </span>188,00 <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/2.jpg" alt="">
-									</div>
-									<p class="spec__name">Клапаны запорные
-										<span class="spec__price"><span>от </span> 170,34  <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
-							<div class="col-md-5">
-								<a href="#" class="spec__item">
-									<div class="spec__img">
-										<img src="f/i/spec/3.jpg" alt="">
-									</div>
-									<p class="spec__name">Фильтры ФМФ
-										<span class="spec__price"><span>от </span> 2024,33 <span>руб.</span></span>
-									</p>
-								</a>
-							</div>
+	  				<div class="col-md-5  contacts__item">
+							<p class="iconize-phone">Тел./факс: <span class="contacts__phone">+7 (4852) 58-56-91</span>,<br><span class="contacts__phone">58-56-91</span> многоканальный</p>
 	  				</div>
-					</div>
-  			</div>
-  		</section>
-  		<section class="section producers clearfix">
-  			<div class="holder">
-  				<h2>Производители</h2>
-  				<div class="producers__holder">
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/1.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/2.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/3.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/4.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/5.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/6.jpg" alt=""></a>
-  					</div>
-  					<div class="producers__item">
-							<a href="#"><img src="f/i/prod/7.jpg" alt=""></a>
-  					</div>
-  				</div>
-  			</div>
-  		</section>
-  		<section class="section news">
-  			<div class="holder">
-  				<h2>Новости</h2>
-  				<div class="row">
-						<div class="col-md-5">
-							<div class="news__item">
-								<div class="news__img">
-									<img src="f/i/news/1.jpg" alt="">
-								</div>
-								<p class="news__date">20.10.2015</p>
-								<a href="#" class="news__name">Поступление радиаторов Heaton</a>
-							</div>
-						</div>
-						<div class="col-md-5">
-							<div class="news__item">
-								<div class="news__img">
-									<img src="f/i/news/2.jpg" alt="">
-								</div>
-								<p class="news__date">20.10.2015</p>
-								<a href="#" class="news__name">Поступление радиаторов Heaton</a>
-							</div>
-						</div>
-						<div class="col-md-5">
-							<div class="news__item">
-								<div class="news__img">
-									<img src="f/i/news/3.jpg" alt="">
-								</div>
-								<p class="news__date">20.10.2015</p>
-								<a href="#" class="news__name">Поступление радиаторов Heaton</a>
-							</div>
-						</div>
-						<div class="col-md-5">
-							<div class="news__item">
-								<div class="news__img">
-									<img src="f/i/news/4.jpg" alt="">
-								</div>
-								<p class="news__date">20.10.2015</p>
-								<a href="#" class="news__name">Поступление радиаторов Heaton</a>
-							</div>
-						</div>
-  				</div>
-  			</div>
-  		</section>
-  		<section class="section achiv">
-  			<div class="holder">
-  				<h2>О компании</h2>
-	  			<p class="achiv__text">Мы всегда рады видеть вас в нашем уютном, гостеприимном офисе. Специалисты нашей компании с удовольствием расскажут вам обо всей имеющейся продукции и помогут выбрать то, что вам нужно.</p>
-  				<div class="row">
-  					<div class="col-md-4">
-							<div class="achiv__item">
-								<p>8</p>
-								<span>лет на рынке</span>
-							</div>
-  					</div>
-  					<div class="col-md-4">
-							<div class="achiv__item">
-								<p>3</p>
-								<span>филиала в России</span>
-							</div>
-  					</div>
-  					<div class="col-md-6">
-							<div class="achiv__item">
-								<p>500</p>
-								<i>м2</i>
-								<span>площадь складских<br>помещений компании</span>
-							</div>
-  					</div>
-  					<div class="col-md-6">
-							<div class="achiv__item">
-								<p>2000</p>
-								<span>количество позиций товара, имеющегося в наличии</span>
-							</div>
-  					</div>
-  				</div>
-  			</div>
+	  				<div class="col-md-5  contacts__item">
+							<p><a href="#" class="underline"><i class="icon-mail"></i>filippov@santeh-yar.ru</a></p>
+	  				</div>
+	  				<div class="col-md-5  contacts__item">
+							<p><a href="#" class="underline"><i class="icon-rekv"></i>Скачать реквизиты</a></p>
+	  				</div>
+	  			</div>
+	  			<div class="map" id="map">
+	  				<form action="" method="post"  class="map__form">
+	  					<p class="map__title">Напишите нам</p>
+	  					<p class="map__subtitle">И наш менеджер перезвонит<br> Вам в течение дня</p>
+	  					<p class="map__caption">ФИО:<span>*</span></p>
+						  <input type="text" name="" class="map__input input"/>
+						  <p class="map__caption">E-mail:<span>*</span></p>
+						  <input type="text" name="" class="map__input input"/>
+						  <p class="map__caption">Телефон:</p>
+						  <input type="text" name="" class="map__input input"/>
+						  <p class="map__caption">Сообщение:<span>*</span></p>
+						  <textarea name="" class="map__input input"></textarea>
+						  <button type="submit" name="" class="map__btn btn">Отправить</button>
+	  				</form>
+	  			</div>
+	  			<h2>Отдел продаж Ярославского филиала</h2>
+	  			<div class="employ">
+	  				<div class="row">
+	  					<div class="col-md-10 employ__item">
+	  						<div class="employ__img">
+	  							<i class="icon-star"></i>
+	  							<b></b>
+	  							<span><img src="f/i/employ/1.jpg" alt=""></span>
+	  						</div><div class="employ__detail">
+	  							<p class="employ__post">Руководитель отдела продаж</p>
+		  						<p class="employ__name">Филиппов Алексей <br>Александрович</p>
+		  						<p class="iconize-phone">(342) 254-55-01</p>
+									<p><a href="mailto:filippov@santeh-yar.ru" class="underline"><i class="icon-mail"></i>filippov@santeh-yar.ru</a></p>
+									<p><i class="icon-icq"></i>642822673</p>
+	  						</div>
+	  					</div>
+	  					<div class="col-md-10 employ__item">
+	  						<div class="employ__img">
+	  							<b></b>
+	  							<span><img src="f/i/employ/2.jpg" alt=""></span>
+	  						</div><div class="employ__detail">
+	  							<p class="employ__post">Менеджер отдела продаж</p>
+		  						<p class="employ__name">Шибаев Валентин <br>Евгеньевич</p>
+		  						<p class="iconize-phone">(4852) 58-56-91 </p>
+									<p><a href="mailto:shibaev@santeh-yar.ru" class="underline"><i class="icon-mail"></i>shibaev@santeh-yar.ru</a></p>
+									<p><i class="icon-icq"></i>655665431</p>
+	  						</div>
+	  					</div>	
+	  				</div>
+	  				<div class="row">
+	  					<div class="col-md-10 employ__item">
+	  						<div class="employ__img">
+	  							<b></b>
+	  							<span><img src="f/i/employ/3.jpg" alt=""></span>
+	  						</div><div class="employ__detail">
+	  							<p class="employ__post">Менеджер отдела продаж (Ярославль и ЯО)</p>
+		  						<p class="employ__name">Дмитриенко Сергей <br>Петрович</p>
+		  						<p class="iconize-phone">(4852) 58-56-91</p>
+									<p><a href="mailto:dmitrienko@santeh-yar.ru" class="underline"><i class="icon-mail"></i>dmitrienko@santeh-yar.ru</a></p>
+	  						</div>
+	  					</div>
+	  					<div class="col-md-10 employ__item">
+	  						<div class="employ__img">
+	  							<b></b>
+	  							<span><img src="f/i/employ/4.jpg" alt=""></span>
+	  						</div><div class="employ__detail">
+	  							<p class="employ__post">Менеджер отдела продаж (Ярославль и ЯО)</p>
+		  						<p class="employ__name">Бортова Анастасия <br>Павловна</p>
+		  						<p class="iconize-phone">(4852) 58-56-92</p>
+									<p><a href="mailto:bortova@santeh-yar.ru" class="underline"><i class="icon-mail"></i>bortova@santeh-yar.ru</a></p>
+	  						</div>
+	  					</div>	
+	  				</div>
+	  			</div>
+	  		</div>
   		</section>
   	</div>
 	</div>

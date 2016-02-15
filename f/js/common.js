@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$(".switcher__btn").click(function(){
+	$(".switcher_active.switcher__btn").click(function(){
 		$(this).closest(".switcher__control").find(".switcher__btn").removeClass("switcher__btn_active");
 		$(this).addClass("switcher__btn_active");
 		var holder = $(this).closest(".switcher").find(".switcher__holder");
