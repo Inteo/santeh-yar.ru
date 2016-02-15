@@ -638,7 +638,12 @@ textarea {
   background: @orange;
   border: 0;
   overflow: hidden;
-  z-index: 1
+  z-index: 1;
+  &_green {
+    background: #00b73f;
+    text-transform: uppercase;
+    width: 50%;
+  }
 }
 .btn:active:hover,
 .btn:hover {
@@ -2332,6 +2337,15 @@ textarea {
   height: 17px;
   background-position: -193px -29px;
 }
+.icon-rekv2 {
+  width: 47px;
+  height: 62px;
+  background-position: -138px -129px;
+  margin-bottom: 10px;
+}
+a:hover .icon-rekv2 {
+  background-position: -185px -129px;
+}
 .icon-med {
   width: 45px;
   height: 62px;
@@ -3295,6 +3309,35 @@ a:hover .icon-inteo {
     color: @orange;
   }
 }
+.request {
+  padding: 20px 0;
+  &__holder {
+    border: 1px solid #eaeaea;
+    padding: 45px 80px;
+  }
+  &-total {
+    margin-left: -15px;
+    margin-right: -15px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    &__row {
+      padding-left: 15px;
+    }
+    &__caption {
+      color: #9a9a9a;
+    }
+    &__price {
+      font-weight: bold;
+      color: #009acf;
+      text-align: left;
+      font-size: 16px;
+      & span {
+        color: #303030;
+      }
+    }
+  }
+}
 .goods {
   padding: 20px 0;
   &__holder {
@@ -3375,12 +3418,86 @@ a:hover .icon-inteo {
       & input {
         width: 60px;
         height: 26px;
-        padding-left: 20px;
+        text-align: center;
       }
     }
     &__btn {
       text-align: center;
     }
+    &_request {
+      margin-bottom: 20px;
+    }
+    &_request &__tb {
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 30px;
+    }
+    &_request &__btn {
+      & a {
+        display: inline-block;
+        vertical-align: top;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        &:before,
+        &:after {
+          content: '';
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background: #d7d7d7;
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        &:after {
+          -ms-transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+.request-form {
+  max-width: 460px;
+  & .input {
+    width: 50%;
+  }
+  & textarea {
+    width: 100% !important;
+    max-width: 100%;
+    min-height: 120px;
+  }
+  &__caption {
+    color: #9a9a9a;
+    line-height: 20px !important;
+    margin-bottom: 5px !important;
+    & span {
+      color: @orange;
+    }
+  }
+  &__rekv {
+    color: #009acf;
+    text-decoration: underline;
+  }
+  &__btn {
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+  &__warning {
+    font-style: italic;
+    color: @orange;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    padding-left: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
   }
 }
 .certif {
